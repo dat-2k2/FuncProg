@@ -24,7 +24,6 @@ muln 1 = 1
 muln n = addl n * muln (n - 1)
 
 
-
 -- Res: 0.00 sec, 22,944 bytes use. 
 -- Exercise 2
 -- S1 = [kiveydewhjusgofiimbbyhwbopvuplwfexresmhtnic]
@@ -55,6 +54,39 @@ pascal i j =
     if i == j then 1 
     else pascal (i-1) (j-1) + pascal i (j-1)
 
+-- Exercise 6
+-- Hilbert
+-- Hilbert curve used to sharpen image
+-- Define 0: upward, 1: down, 2:left, 3: right
+-- Hilbert function continuous at every point
+rotr:: Int -> [[Int]]->[[Int]]
+rotr n [] = []
+rotr n a  = [last (head a), n - 1 - head(head a)]:rotr n (tail a)
+    -- | ((head (head a)) * 2 + 1<= n) && ((last (head a)) * 2 + 1 <= n) = [head (head a), n - 1 - last(head a)]:rotr n (tail a)
+    -- | ((head (head a)) * 2 + 1<= n) && ((last (head a)) * 2 + 1> n) = [n - 1 - head (head a), last(head a)]:rotr n (tail a) 
+    -- | ((head (head a)) * 2 + 1> n) && ((last (head a)) * 2 + 1> n) = [head (head a), n - 1 - last(head a)]:rotr n (tail a) 
+    -- | ((head (head a)) * 2 + 1> n) && ((last (head a)) * 2 + 1<= n) = [n - 1 - head (head a), last(head a)]:rotr n (tail a) 
+
+power2:: Int -> Int
+power2 0 = 1
+power2 n = 2 * power2 (n-1)
+
+reflexx::Int -> [[Int]] -> [[Int]]
+reflexx n [] = []
+reflexx n a = [n - 1 - head (last a), last (last a)]: reflexx n (init a)
+
+rev:: [[Int]] -> [[Int]]
+rev [a] = [a]
+rev a = (last a): rev (init a)
+
+shiftup:: Int -> [[Int]]->[[Int]]
+shiftup a [] = []
+shiftup a b = [head (head b), a+ last(head b)]: shiftup a (tail b)
+
+hilbert:: Int -> [Int] -> [[Int]]
+hilbert 0 [a,b] = [[a,b]]
+hilbert 1 [a,b] = [[a,b],[a,b+1],[a+1,b+1],[a+1,b]]
+hilbert n [a,b] = rev (rotr (power2(n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]) ++ reflexx (power2 n) (rev (rotr (power2 (n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]))
 main :: IO ()
 main = do
     print "Exercise 1: Result is"
@@ -67,4 +99,5 @@ main = do
     print (separate ["kiv", "eydew", "hjusg", "mbbyhwbopvupl", "ofii", "wfexresmhtnic"])
     print "Exercise 5: Pascal number "
     print (pascal 3 4)
-
+    print "Exercise 6: Pascal number "
+    print (hilbert 6 [0,0])

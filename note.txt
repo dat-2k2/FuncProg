@@ -1,0 +1,21 @@
+note.txt
+in a Haskell prog, compiler gonna find main() func, which, returns IO (print, etc.). To avoid error, main must be defined somewhere. 
+main :: IO(), like that
+
+main = do [sth]
+
+Diff from functional, C++ .. are called imperative languages. Name in imperative languages can be associated with a new value by assigning, but in functional language
+it's impossible
+"In functional languages, new values are associated with new names through recursive function call nesting."
+
+Data structure defined explicitly, by recursion
+
+#Run a new prog
+In terminal, ghci
+:load [filename]
+[function name]
+
+:set 
+sets options: + ghci and  - command line
+
+avoid func [a] -> [a]: this called rigid type, like auto in cpp. Type should be clearly specified 
