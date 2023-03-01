@@ -62,10 +62,6 @@ pascal i j =
 rotr:: Int -> [[Int]]->[[Int]]
 rotr n [] = []
 rotr n a  = [last (head a), n - 1 - head(head a)]:rotr n (tail a)
-    -- | ((head (head a)) * 2 + 1<= n) && ((last (head a)) * 2 + 1 <= n) = [head (head a), n - 1 - last(head a)]:rotr n (tail a)
-    -- | ((head (head a)) * 2 + 1<= n) && ((last (head a)) * 2 + 1> n) = [n - 1 - head (head a), last(head a)]:rotr n (tail a) 
-    -- | ((head (head a)) * 2 + 1> n) && ((last (head a)) * 2 + 1> n) = [head (head a), n - 1 - last(head a)]:rotr n (tail a) 
-    -- | ((head (head a)) * 2 + 1> n) && ((last (head a)) * 2 + 1<= n) = [n - 1 - head (head a), last(head a)]:rotr n (tail a) 
 
 power2:: Int -> Int
 power2 0 = 1
@@ -87,6 +83,7 @@ hilbert:: Int -> [Int] -> [[Int]]
 hilbert 0 [a,b] = [[a,b]]
 hilbert 1 [a,b] = [[a,b],[a,b+1],[a+1,b+1],[a+1,b]]
 hilbert n [a,b] = rev (rotr (power2(n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]) ++ reflexx (power2 n) (rev (rotr (power2 (n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]))
+
 main :: IO ()
 main = do
     print "Exercise 1: Result is"
