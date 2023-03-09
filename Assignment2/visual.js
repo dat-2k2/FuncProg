@@ -1,30 +1,49 @@
-const boardview = document.querySelector('.boardview');
-let numberSolutions = 5;
+const boardview = document.querySelector('.grid');
 
+let Sols = [[5,4,7,6],[2,4,7,6],[1,4,7,6],[5,2,7,6],[1,2,7,6],[5,1,7,6],[2,1,7,6],[2,7,5,6],[1,7,5,6],[7,4,5,6],[2,4,5,6],[1,4,5,6],[7,2,5,6],[1,2,5,6],[7,1,5,6],[2,1,5,6],[5,7,4,6],[2,7,4,6],[1,7,4,6],[7,2,4,6],[5,2,4,6],[1,2,4,6],[7,1,4,6]
+,[5,1,4,6],[2,1,4,6],[5,7,2,6],[1,7,2,6],[7,4,2,6],[5,4,2,6],[1,4,2,6],[7,1,2,6],[5,1,2,6],[5,7,1,6],[2,7,1,6],[7,4,1,6],[5,4,1,6],[2,4,1,6],[7,2,1,6],[5,2,1,6],[2,6,7,5],[1,6,7,5],[6,4,7,5],[2,4,7,5],[1,4,7,5],[6,2,7,5],[1,2,7,5]
+,[6,1,7,5],[2,1,7,5],[6,7,4,5],[2,7,4,5],[1,7,4,5],[7,6,4,5],[2,6,4,5],[1,6,4,5],[7,2,4,5],[6,2,4,5],[1,2,4,5],[7,1,4,5],[6,1,4,5],[2,1,4,5],[6,7,2,5],[1,7,2,5],[7,6,2,5],[1,6,2,5],[7,4,2,5],[6,4,2,5],[1,4,2,5],[7,1,2,5],[6,1,2,5]
+,[6,7,1,5],[2,7,1,5],[7,6,1,5],[2,6,1,5],[7,4,1,5],[6,4,1,5],[2,4,1,5],[7,2,1,5],[6,2,1,5],[5,6,7,4],[2,6,7,4],[1,6,7,4],[6,2,7,4],[5,2,7,4],[1,2,7,4],[6,1,7,4],[5,1,7,4],[2,1,7,4],[6,7,5,4],[2,7,5,4],[1,7,5,4],[7,6,5,4],[2,6,5,4]
+,[1,6,5,4],[7,2,5,4],[6,2,5,4],[1,2,5,4],[7,1,5,4],[6,1,5,4],[2,1,5,4],[6,7,2,4],[5,7,2,4],[1,7,2,4],[7,6,2,4],[5,6,2,4],[1,6,2,4],[7,1,2,4],[6,1,2,4],[5,1,2,4],[6,7,1,4],[5,7,1,4],[2,7,1,4],[7,6,1,4],[5,6,1,4],[2,6,1,4],[7,2,1,4]
+,[6,2,1,4],[5,2,1,4],[5,6,7,2],[1,6,7,2],[6,4,7,2],[5,4,7,2],[1,4,7,2],[6,1,7,2],[5,1,7,2],[6,7,5,2],[1,7,5,2],[7,6,5,2],[1,6,5,2],[7,4,5,2],[6,4,5,2],[1,4,5,2],[7,1,5,2],[6,1,5,2],[6,7,4,2],[5,7,4,2],[1,7,4,2],[7,6,4,2],[5,6,4,2]
+,[1,6,4,2],[7,1,4,2],[6,1,4,2],[5,1,4,2],[6,7,1,2],[5,7,1,2],[7,6,1,2],[5,6,1,2],[7,4,1,2],[6,4,1,2],[5,4,1,2],[5,6,7,1],[2,6,7,1],[6,4,7,1],[5,4,7,1],[2,4,7,1],[6,2,7,1],[5,2,7,1],[6,7,5,1],[2,7,5,1],[7,6,5,1],[2,6,5,1],[7,4,5,1]
+,[6,4,5,1],[2,4,5,1],[7,2,5,1],[6,2,5,1],[6,7,4,1],[5,7,4,1],[2,7,4,1],[7,6,4,1],[5,6,4,1],[2,6,4,1],[7,2,4,1],[6,2,4,1],[5,2,4,1],[6,7,2,1],[5,7,2,1],[7,6,2,1],[5,6,2,1],[7,4,2,1],[6,4,2,1],[5,4,2,1]];
+let numberSolutions = Sols.length;
 for (let sol = 0; sol < numberSolutions; sol++){
-    const board = document.createElement('div');
-    board.style.display = 'flex';
-    board.style.flexWrap = 'wrap';
-    board.style.border = '1px solid green';
-    board.style.margin = '10px';
-    board.style.width = boardview.clientWidth / 4 + 'px';
-    board.style.height = boardview.clientHeight / 4 + 'px';
+    board = document.createElement('div');
+    board.className = 'board';
     boardview.append(board);
-
-    for (let rows = 0; rows < 8; rows++){
-        let boxColor;
-        let boxStartColorWhite = rows % 2 === 0? true: false;
-        for (let columns = 0; columns < 8; columns++){
-            if(boxStartColorWhite)
-                boxColor = columns % 2 === 0? 'lightyellow' : 'brown';
-            else
-                boxColor = columns % 2 === 0? 'brown' : 'lightyellow';
-            const box = document.createElement('div');
-            box.style.width = board.clientWidth / 8 + 'px';
-            box.style.height = board.clientHeight / 8 + 'px';
-            box.style.backgroundColor = boxColor;
-            board.append(box);
+    for (let rownum = 0; rownum < 8; rownum++){
+        for (let column = 0; column < 8; column++){
+            cell = document.createElement('div');
+            cell.style.width = board.clientWidth / 8 + 'px';
+            cell.style.height = board.clientHeight / 8 + 'px';
+            board.append(cell);
+            if ((rownum % 2) == (column % 2)) {
+                cell.className = 'odd';
+            }
+            else{
+                cell.className = 'even';
+            }
+            //
+            if(sol < Sols.length)
+                if (Sols[sol][column]-1 == rownum){
+                    rook = document.createElement('img');
+                    rook.className = 'rook';
+                    rook.src = "rook.png";
+                    rook.style.width = (cell.clientWidth - 2) +'px';
+                    rook.style.height = (cell.clientHeight - 2) +'px';
+                    cell.append(rook);
+                };
         }
     }
 }
-
+//sample
+// var body = document.querySelector('.grid');
+// table.forEach((item)=> {
+//     body.innerHTML+= `
+//     <div class="grid table-with-color">
+//         ${i.data}
+//         </div>
+//     `
+// })

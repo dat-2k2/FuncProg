@@ -6,6 +6,7 @@
 
 body{
     display: flex;
+    margin-top: 100px;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -15,12 +16,33 @@ body{
 .boardview{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
-    border: 1px solid green;
-}
+    height: 100vh;
+    width: 100vh;
 
-.rook{
+}
+.grid{
+    border: 1px solid green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.board{
     display: flex;
     flex-wrap: wrap;
-    height
+    border: 1px solid green;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+.rook{
+    display: image;
+    background-color: transparent;
+}
+
+.odd{
+    align-content: center;
+    background-color: brown;
+}
+
+.even{
+    background-color: lightyellow;
 }

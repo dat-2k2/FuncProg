@@ -61,7 +61,7 @@ main = do
     let leaf1 = CustomTree 1 [Nil]
     let leaf2 = CustomTree 2 [Nil]
     let root = CustomTree 1 [leaf1, leaf2]
-    let n = 4
-    print (filter(\x -> length x == n) (allPaths (diffrooks 7)))
+    let n = 7
+    print (filter(\x -> length x == n) (allPaths (diffrooks n)))
 --ver2: diagonal is blocked. 
 

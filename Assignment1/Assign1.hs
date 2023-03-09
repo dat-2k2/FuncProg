@@ -4,8 +4,6 @@ import Language.Haskell.TH.PprLib (sep)
 -- Exercise 1
 -- n l k p = 3 4 9 6
 -- If n is fixed, l k p have no meaning ??
-addEx :: Int->Int->Int
-addEx x y = x+y
 
 addp :: Int->Int
 addp 1 = 1
@@ -57,7 +55,6 @@ pascal i j =
 -- Exercise 6
 -- Hilbert
 -- Hilbert curve used to sharpen image
--- Define 0: upward, 1: down, 2:left, 3: right
 -- Hilbert function continuous at every point
 rotr:: Int -> [[Int]]->[[Int]]
 rotr n [] = []
