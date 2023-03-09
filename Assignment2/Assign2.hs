@@ -50,10 +50,10 @@ pwithfilter n pos rows f = if not( f [pos, n] ) then Nil else
     CustomTree pos (map (\p -> pwithfilter (n-1) p (filter (\x -> x/= p && x/= pos) rows) f) (filter (/=pos) rows))
     
 rooks:: Int -> CustomTree
-rooks n = permutation (n+1) 0  (rangeCustom n) 
+rooks n = permutation (n+1) 0 (rangeCustom n)
 
 diffrooks:: Int -> CustomTree
-diffrooks n = pwithfilter (n+1) 0  (rangeCustom n) (\a -> not (a!!0 == a!!1))
+diffrooks n = pwithfilter (n+1) 0  (rangeCustom n) (\a -> (a!!0 /= a!!1))
 
 main::IO()
 main = do
@@ -61,7 +61,7 @@ main = do
     let leaf1 = CustomTree 1 [Nil]
     let leaf2 = CustomTree 2 [Nil]
     let root = CustomTree 1 [leaf1, leaf2]
-    let n = 7
-    print (filter(\x -> length x == n) (allPaths (diffrooks n)))
+    let n = 6
+    print  (filter (\x -> length x == n) (allPaths (diffrooks n)))
 --ver2: diagonal is blocked. 
 
