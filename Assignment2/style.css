@@ -7,13 +7,19 @@
 body{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     max-width: 100%;
     height: auto;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     background-color: rgb(red, green, blue);
 }
 
+.title{
+    font-size: 24;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .grid{
     border: 1px solid green;
     display: grid;
@@ -31,15 +37,24 @@ body{
     height: 250px;
 }
 .rook{
-    background-color: green;
+    background-image: url("rook.png");
+    background-size: contain;
+    border: 1px solid gray;
 }
 
 .odd{
     align-content: center;
     background-color: brown;
+    border: 1px solid gray;
 }
 
 .even{
     align-content: center;
     background-color: lightyellow;
+    border: 1px solid gray;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
 }

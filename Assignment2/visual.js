@@ -1,37 +1,87 @@
 const boardview = document.querySelector('.grid');
 let Sols = [[2,1,4,3,6,5],[4,1,2,3,6,5],[2,4,1,3,6,5],[3,1,4,2,6,5],[3,4,1,2,6,5],[4,3,1,2,6,5],[2,3,4,1,6,5],[3,4,2,1,6,5],[4,3,2,1,6,5],[3,1,2,6,4,5],[2,3,1,6,4,5],[2,1,6,3,4,5],[6,1,2,3,4,5],[2,6,1,3,4,5],[3,1,6,2,4,5],[3,6,1,2,4,5],[6,3,1,2,4,5],[2,3,6,1,4,5],[3,6,2,1,4,5],[6,3,2,1,4,5],[2,1,4,6,3,5],[4,1,2,6,3,5],[2,4,1,6,3,5],[4,1,6,2,3,5],[6,1,4,2,3,5],[4,6,1,2,3,5],[6,4,1,2,3,5],[2,4,6,1,3,5],[2,6,4,1,3,5],[4,6,2,1,3,5],[6,4,2,1,3,5],[3,1,4,6,2,5],[3,4,1,6,2,5],[4,3,1,6,2,5],[4,1,6,3,2,5],[6,1,4,3,2,5],[4,6,1,3,2,5],[6,4,1,3,2,5],[3,4,6,1,2,5],[4,3,6,1,2,5],[3,6,4,1,2,5],[6,3,4,1,2,5],[2,3,4,6,1,5],[3,4,2,6,1,5],[4,3,2,6,1,5],[2,4,6,3,1,5],[2,6,4,3,1,5],[4,6,2,3,1,5],[6,4,2,3,1,5],[3,4,6,2,1,5],[4,3,6,2,1,5],[3,6,4,2,1,5],[6,3,4,2,1,5],[3,1,2,5,6,4],[2,3,1,5,6,4],[2,1,5,3,6,4],[5,1,2,3,6,4],[2,5,1,3,6,4],[3,1,5,2,6,4],[3,5,1,2,6,4],[5,3,1,2,6,4],[2,3,5,1,6,4],[3,5,2,1,6,4],[5,3,2,1,6,4],[2,1,5,6,3,4],[5,1,2,6,3,4],[2,5,1,6,3,4],[2,1,6,5,3,4],[6,1,2,5,3,4],[2,6,1,5,3,4],[5,1,6,2,3,4],[6,1,5,2,3,4],[5,6,1,2,3,4],[6,5,1,2,3,4],[2,5,6,1,3,4],[2,6,5,1,3,4],[5,6,2,1,3,4],[6,5,2,1,3,4],[3,1,5,6,2,4],[3,5,1,6,2,4],[5,3,1,6,2,4],[3,1,6,5,2,4],[3,6,1,5,2,4],[6,3,1,5,2,4],[5,1,6,3,2,4],[6,1,5,3,2,4],[5,6,1,3,2,4],[6,5,1,3,2,4],[3,5,6,1,2,4],[5,3,6,1,2,4],[3,6,5,1,2,4],[6,3,5,1,2,4],[2,3,5,6,1,4],[3,5,2,6,1,4],[5,3,2,6,1,4],[2,3,6,5,1,4],[3,6,2,5,1,4],[6,3,2,5,1,4],[2,5,6,3,1,4],[2,6,5,3,1,4],[5,6,2,3,1,4],[6,5,2,3,1,4],[3,5,6,2,1,4],[5,3,6,2,1,4],[3,6,5,2,1,4],[6,3,5,2,1,4],[2,1,4,5,6,3],[4,1,2,5,6,3],[2,4,1,5,6,3],[4,1,5,2,6,3],[5,1,4,2,6,3],[4,5,1,2,6,3],[5,4,1,2,6,3],[2,4,5,1,6,3],[2,5,4,1,6,3],[4,5,2,1,6,3],[5,4,2,1,6,3],[2,1,5,6,4,3],[5,1,2,6,4,3],[2,5,1,6,4,3],[2,1,6,5,4,3],[6,1,2,5,4,3],[2,6,1,5,4,3],[5,1,6,2,4,3],[6,1,5,2,4,3],[5,6,1,2,4,3],[6,5,1,2,4,3],[2,5,6,1,4,3],[2,6,5,1,4,3],[5,6,2,1,4,3],[6,5,2,1,4,3],[4,1,5,6,2,3],[5,1,4,6,2,3],[4,5,1,6,2,3],[5,4,1,6,2,3],[4,1,6,5,2,3],[6,1,4,5,2,3],[4,6,1,5,2,3],[6,4,1,5,2,3],[4,5,6,1,2,3],[5,4,6,1,2,3],[4,6,5,1,2,3],[6,4,5,1,2,3],[5,6,4,1,2,3],[6,5,4,1,2,3],[2,4,5,6,1,3],[2,5,4,6,1,3],[4,5,2,6,1,3],[5,4,2,6,1,3],[2,4,6,5,1,3],[2,6,4,5,1,3],[4,6,2,5,1,3],[6,4,2,5,1,3],[4,5,6,2,1,3],[5,4,6,2,1,3],[4,6,5,2,1,3],[6,4,5,2,1,3],[5,6,4,2,1,3],[6,5,4,2,1,3],[3,1,4,5,6,2],[3,4,1,5,6,2],[4,3,1,5,6,2],[4,1,5,3,6,2],[5,1,4,3,6,2],[4,5,1,3,6,2],[5,4,1,3,6,2],[3,4,5,1,6,2],[4,3,5,1,6,2],[3,5,4,1,6,2],[5,3,4,1,6,2],[3,1,5,6,4,2],[3,5,1,6,4,2],[5,3,1,6,4,2],[3,1,6,5,4,2],[3,6,1,5,4,2],[6,3,1,5,4,2],[5,1,6,3,4,2],[6,1,5,3,4,2],[5,6,1,3,4,2],[6,5,1,3,4,2],[3,5,6,1,4,2],[5,3,6,1,4,2],[3,6,5,1,4,2],[6,3,5,1,4,2],[4,1,5,6,3,2],[5,1,4,6,3,2],[4,5,1,6,3,2],[5,4,1,6,3,2],[4,1,6,5,3,2],[6,1,4,5,3,2],[4,6,1,5,3,2],[6,4,1,5,3,2],[4,5,6,1,3,2],[5,4,6,1,3,2],[4,6,5,1,3,2],[6,4,5,1,3,2],[5,6,4,1,3,2],[6,5,4,1,3,2],[3,4,5,6,1,2],[4,3,5,6,1,2],[3,5,4,6,1,2],[5,3,4,6,1,2],[3,4,6,5,1,2],[4,3,6,5,1,2],[3,6,4,5,1,2],[6,3,4,5,1,2],[4,5,6,3,1,2],[5,4,6,3,1,2],[4,6,5,3,1,2],[6,4,5,3,1,2],[5,6,4,3,1,2],[6,5,4,3,1,2],[2,3,4,5,6,1],[3,4,2,5,6,1],[4,3,2,5,6,1],[2,4,5,3,6,1],[2,5,4,3,6,1],[4,5,2,3,6,1],[5,4,2,3,6,1],[3,4,5,2,6,1],[4,3,5,2,6,1],[3,5,4,2,6,1],[5,3,4,2,6,1],[2,3,5,6,4,1],[3,5,2,6,4,1],[5,3,2,6,4,1],[2,3,6,5,4,1],[3,6,2,5,4,1],[6,3,2,5,4,1],[2,5,6,3,4,1],[2,6,5,3,4,1],[5,6,2,3,4,1],[6,5,2,3,4,1],[3,5,6,2,4,1],[5,3,6,2,4,1],[3,6,5,2,4,1],[6,3,5,2,4,1],[2,4,5,6,3,1],[2,5,4,6,3,1],[4,5,2,6,3,1],[5,4,2,6,3,1],[2,4,6,5,3,1],[2,6,4,5,3,1],[4,6,2,5,3,1],[6,4,2,5,3,1],[4,5,6,2,3,1],[5,4,6,2,3,1],[4,6,5,2,3,1],[6,4,5,2,3,1],[5,6,4,2,3,1],[6,5,4,2,3,1],[3,4,5,6,2,1],[4,3,5,6,2,1],[3,5,4,6,2,1],[5,3,4,6,2,1],[3,4,6,5,2,1],[4,3,6,5,2,1],[3,6,4,5,2,1],[6,3,4,5,2,1],[4,5,6,3,2,1],[5,4,6,3,2,1],[4,6,5,3,2,1],[6,4,5,3,2,1],[5,6,4,3,2,1],[6,5,4,3,2,1]]
-let numberSolutions = Sols.length;
-let size =  Sols[0].length;
-for (let sol = 0; sol < numberSolutions; sol++){
-    board = document.createElement('div');
-    board.className = 'board';
-    board.style.setProperty('--size', size);
-    boardview.append(board);
-    for (let rownum = 0; rownum < size; rownum++){
-        for (let column = 0; column < size; column++){
-            cell = document.createElement('div');
-            cell.style.width = board.clientWidth / size + 'px';
-            cell.style.height = board.clientHeight / size + 'px';
-            board.append(cell);
-            if (Sols[sol][column]-1 == rownum){
-                cell.className = 'rook';
-            }
-            else
+const numberSolutions = Sols.length;
+let maxitem = 100;
+const size =  Sols[0].length;
+const pagelist = [];
+let numpage = 0;
+while (numpage < numberSolutions){
+    pagelist.push([numpage, numpage + maxitem - 1]);
+    numpage = numpage + maxitem;
+}
+pagelist[pagelist.length - 1][1] = numberSolutions - 1;
+
+//store the current numpage
+numpage = 0;
+document.querySelector('.title').innerHTML = "All solutions for difficult version of "+size+" rooks. Number solutions: "+numberSolutions;
+
+function preload(){
+    for (let sol = 0; sol < maxitem; sol++){
+        board = document.createElement('div');
+        board.className = 'board';
+        board.style.setProperty('--size', size);
+        boardview.append(board);
+        for (let rownum = 0; rownum < size; rownum++){
+            for (let column = 0; column < size; column++){
+                cell = document.createElement('div');
+                cell.style.width = board.clientWidth / size + 'px';
+                cell.style.height = board.clientHeight / size + 'px';
+                board.append(cell);
                 if ((rownum % 2) == (column % 2)) {
-                    cell.className = 'odd';
-                }
+                        cell.className = 'odd';
+                    }
                 else{
-                    cell.className = 'even';
-                }
+                        cell.className = 'even';
+                    }
+            }
         }
     }
 }
-//sample
-// var body = document.querySelector('.grid');
-// table.forEach((item)=> {
-//     body.innerHTML+= `
-//     <div class="grid table-with-color">
-//         ${i.data}
-//         </div>
-//     `
-// })
+preload();
+function load(start, end){
+    // if (end-start +1 < maxitem){
+    //     let i = maxitem - end + start;
+    //     while (i--){
+    //          document.querySelector('.board').remove();
+    //     }
+    // }
+    let current = start;
+        for (let board = 0; board < document.getElementsByClassName('board').length; board++){
+            let tmp = document.getElementsByClassName('board')[board];
+            for (let col = 0; col < size; col++){
+                    document.getElementsByClassName('board')[board].children[col + (Sols[current][col] - 1)*size].className = 'rook';
+                    //console.log(col + (Sols[current][col] - 1)*size);
+                }
+            current++;
+        }
+}
+load(pagelist[0][0],pagelist[0][1]);
+
+function removerook(){
+    for (let board = 0; board < document.getElementsByClassName('board').length; board++){
+        let tmp = document.getElementsByClassName('board')[board];
+        for (let row = 0; row < size; row++){
+            for (let col=0; col < size;col++){
+                tmp.children[row*size+col].className = (row % 2 == col%2)?'odd':'even';
+            }
+        }
+    }
+}
+function nextpage(){
+    if (numpage <= pagelist.length - 2) 
+    {
+        removerook();
+        load(pagelist[++numpage][0], pagelist[numpage][1]);
+    }
+
+}
+
+function previouspage(){
+    if (numpage != 0)
+    {
+        removerook();
+        load(pagelist[--numpage][0], pagelist[numpage][1]);
+    }
+}
+
+// CSS loading is also slow

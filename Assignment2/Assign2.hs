@@ -5,6 +5,8 @@ import Language.Haskell.TH.PprLib (sep)
 import Distribution.PackageDescription (BuildType(Custom))
 import Data.Array (Ix(range))
 import Data.Semigroup (diff)
+import GHC.IO.Handle.FD (openBinaryFile)
+import GHC.IO.IOMode (IOMode(WriteMode))
 
 valid:: [Int] -> [[Int]] -> Bool
 valid a [] = True
@@ -55,6 +57,7 @@ rooks n = permutation (n+1) 0 (rangeCustom n)
 diffrooks:: Int -> CustomTree
 diffrooks n = pwithfilter (n+1) 0  (rangeCustom n) (\a -> (a!!0 /= a!!1))
 
+
 main::IO()
 main = do
     -- Everything is function
@@ -63,5 +66,6 @@ main = do
     let root = CustomTree 1 [leaf1, leaf2]
     let n = 6
     print  (filter (\x -> length x == n) (allPaths (diffrooks n)))
+
 --ver2: diagonal is blocked. 
 
