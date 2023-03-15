@@ -5,8 +5,8 @@ import Language.Haskell.TH.PprLib (sep)
 import Distribution.PackageDescription (BuildType(Custom))
 import Data.Array (Ix(range))
 import Data.Semigroup (diff)
-import GHC.IO.Handle.FD (openBinaryFile)
-import GHC.IO.IOMode (IOMode(WriteMode))
+import Control.Monad
+import Data.Char (intToDigit)
 
 valid:: [Int] -> [[Int]] -> Bool
 valid a [] = True
@@ -57,6 +57,22 @@ rooks n = permutation (n+1) 0 (rangeCustom n)
 diffrooks:: Int -> CustomTree
 diffrooks n = pwithfilter (n+1) 0  (rangeCustom n) (\a -> (a!!0 /= a!!1))
 
+inttoString:: Int -> String
+inttoString 0 = "0"
+inttoString a = if a < 10 then [intToDigit a]  else (inttoString (div a 10)) ++ [intToDigit (mod a 10)]
+
+toStringCustom::[Int] -> String
+toStringCustom [] = []
+toStringCustom [a] = inttoString a
+toStringCustom a = inttoString (head a) ++","++toStringCustom (tail a) 
+
+toStringCustom2:: [[Int]] ->String
+toStringCustom2 [] = []
+toStringCustom2 [[]] = []
+toStringCustom2 [a] = "[" ++ toStringCustom a ++"]"
+toStringCustom2 a = "["++(toStringCustom (head a) )++"],"++ (toStringCustom2 (tail a))
+
+
 
 main::IO()
 main = do
@@ -64,8 +80,8 @@ main = do
     let leaf1 = CustomTree 1 [Nil]
     let leaf2 = CustomTree 2 [Nil]
     let root = CustomTree 1 [leaf1, leaf2]
-    let n = 6
-    print  (filter (\x -> length x == n) (allPaths (diffrooks n)))
+    let n = 7
+    writeFile "test.txt"  ("[" ++ (toStringCustom2 (filter (\x -> length x == n) (allPaths (diffrooks n))))++"]")
 
 --ver2: diagonal is blocked. 
 
