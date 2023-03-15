@@ -81,7 +81,7 @@ main = do
     let leaf2 = CustomTree 2 [Nil]
     let root = CustomTree 1 [leaf1, leaf2]
     let n = 7
-    writeFile "test.txt"  ("[" ++ (toStringCustom2 (filter (\x -> length x == n) (allPaths (diffrooks n))))++"]")
+    writeFile "test.txt"  ("[" ++ (toStringCustom2 (filter (\x -> length x == n) (allPaths (rooks n))))++"]")
 
 --ver2: diagonal is blocked. 
 
