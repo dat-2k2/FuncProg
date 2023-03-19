@@ -71,8 +71,8 @@ toStringCustom a = inttoString (head a) ++","++toStringCustom (tail a)
 toStringCustom2:: [[Int]] ->String
 toStringCustom2 [] = []
 toStringCustom2 [[]] = []
-toStringCustom2 [a] = "[" ++ toStringCustom a ++"]"
-toStringCustom2 a = "["++(toStringCustom (head a) )++"],"++ (toStringCustom2 (tail a))
+toStringCustom2 [a] = "{\"path\": ["++(toStringCustom a )++"]}"
+toStringCustom2 a = "{\"path\": ["++(toStringCustom (head a) )++"]},"++ (toStringCustom2 (tail a))
 
 f::Int->Int->Int 
 f x _ = x
@@ -86,8 +86,7 @@ main = do
     let leaf1 = CustomTree 1 [Nil]
     let leaf2 = CustomTree 2 [Nil]
     let root = CustomTree 1 [leaf1, leaf2]
-    let n = 7
-    writeFile "test.txt"  ("[" ++ (toStringCustom2 (filter (\x -> length x == n) (allPaths (rooks n))))++"]")
-
+    let n = 9
+    writeFile "visualize/test.json" ("[" ++ (toStringCustom2 (filter (\x -> length x == n) (allPaths (rooks n))))++"]")
 --ver2: diagonal is blocked. 
 
