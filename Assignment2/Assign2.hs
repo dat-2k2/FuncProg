@@ -57,6 +57,8 @@ rooks n = permutation (n+1) 0 (rangeCustom n)
 diffrooks:: Int -> CustomTree
 diffrooks n = pwithfilter (n+1) 0  (rangeCustom n) (\a -> (a!!0 /= a!!1))
 
+
+--print 
 inttoString:: Int -> String
 inttoString 0 = "0"
 inttoString a = if a < 10 then [intToDigit a]  else (inttoString (div a 10)) ++ [intToDigit (mod a 10)]
@@ -72,7 +74,11 @@ toStringCustom2 [[]] = []
 toStringCustom2 [a] = "[" ++ toStringCustom a ++"]"
 toStringCustom2 a = "["++(toStringCustom (head a) )++"],"++ (toStringCustom2 (tail a))
 
+f::Int->Int->Int 
+f x _ = x
 
+f2:: [Int]
+f2 = 0:1:zipWith(+) f2 (tail f2)
 
 main::IO()
 main = do

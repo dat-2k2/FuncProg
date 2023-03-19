@@ -40,7 +40,8 @@
 %%% The "real" document content comes below...
 \usepackage{setspace}
 \usepackage[section]{minted}
-
+\usepackage{caption}
+\usepackage{subcaption}
 %%% ToC (table of contents) APPEARANCE
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
@@ -73,7 +74,7 @@
 	\hfill \break
 	\hfill \break
 	\hfill \break
-\end{center}	
+	\end{center}	
 
 \normalsize{ 
 	\begin{tabular}{ccc}
@@ -141,41 +142,95 @@
 
 \inputminted[firstline = 41, lastline = 43, frame= single]{Haskell}{F:/git/FuncProg/Assignment1/Assign1.hs}
 
-\newpage
 \subsection{Задание 5}
 
 \textit{
 Реализовать вычисление элемента треугольника Паскаля (расчет i-ого числа в j-ой строке).
 }
 \begin{figure}[H]
-\centering\includegraphics{pascal.png}
+\begin{center}
+\begin{tabular}{ccccccc}
+1\\
+1 & 1\\
+1 & 2 & 1\\
+1 & 3 & 3 & 1\\
+1 & 4 & 6 & 4 & 1\\
+1 & 5 & 10 & 10 & 5 & 1\\
+1 & 6 & 15 & 20 & 15 & 6 & 1\\
+\end{tabular}
 \caption{Треугольник Паскаля}
+\end{center}
 \end{figure}
+
 Формула вычисления число Паскаля на строку \textbf{j} и столбец \textbf{i}:
-\[ \begin{align}& p(0,0) = p (0,i) = p (i,i) = 1 \\
- & p(i,j) = p(i-1,j-1) + p(i,j -1)\end{align}\]
+\[ \begin{aligned}& p(0,0) = p (0,i) = p (i,i) = 1 \\
+ & p(i,j) = p(i-1,j-1) + p(i,j -1)\end{aligned}\]
 Реализуют функцию \textbf{pascal: (Int,Int)->Int}, в которой рекурсивно вычисляют число Паскаля с данным положением. 
 
-\newpage
 \inputminted[firstline = 48, lastline = 53, frame= single]{Haskell}{F:/git/FuncProg/Assignment1/Assign1.hs}
 
-\subsection{Задание 5}
-\subsubsection{Математическое описание}
-Фракта́л 
-\textit{
-Реализовать вычисление элемента треугольника Паскаля (расчет i-ого числа в j-ой строке).
-}
+\subsection{Задание 6}
+\subsubsection{Теоретическое сведение}
+\begin{figure}
+
+\end{figure}
+Кривая Гильберта (известная также как заполняющая пространство кривая Гильберта) — это непрерывная фрактальная заполняющая пространство кривая, впервые описанная немецким математиком Давидом Гильбертом в 1891 году, как вариант заполняющих пространство кривых Пеано, открытых итальянским математиком Джузеппе Пеано в 1890 году.
+
+
+\subsubsection{Реализация}
+Кривую Гильберта могут рисовать по преобразованию сдвига, поворотa и горизонтальной рефлексии. 
+
 \begin{figure}[H]
-\centering\includegraphics{pascal.png}
-\caption{Треугольник Паскаля}
+
+\begin{subfigure}[1]{0.45\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert4step1.png}
+\caption{Нарисовать 2 кривые степени \textbf{n-1} на 2-ых и 3-ых кварталах}
+\end{subfigure}
+\hfill
+\begin{subfigure}[1]{0.45\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert4step2.png}
+\caption{Повернуть направо нижнюю кривую}
+\end{subfigure}
+
+\begin{subfigure}[1]{0.45\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert4step3.png}
+\caption{Рефлексировать левую половину направо}
+\end{subfigure}
+\hfill
+\begin{subfigure}[1]{0.45\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert4step4.png}
+\caption{Соединить начала и концы фигуров}
+\end{subfigure}
+\caption{Рекурсивное строение кривой Гилберта (n=4)}
 \end{figure}
-Формула вычисления число Паскаля на строку \textbf{j} и столбец \textbf{i}:
-\[ \begin{align}& p(0,0) = p (0,i) = p (i,i) = 1 \\
- & p(i,j) = p(i-1,j-1) + p(i,j -1)\end{align}\]
-Реализуют функцию \textbf{pascal: (Int,Int)->Int}, в которой рекурсивно вычисляют число Паскаля с данным положением. 
+
 
 \newpage
-\inputminted[firstline = 48, lastline = 53, frame= single]{Haskell}{F:/git/FuncProg/Assignment1/Assign1.hs}
+\inputminted[firstline = 59, lastline = 87, frame= single, breaklines]{Haskell}{F:/git/FuncProg/Assignment1/Assign1.hs}
+\newpage
+\section{Результат работы}
+Функиця \textbf{main}
+\inputminted[firstline = 90, lastline = 103, frame= single, breaklines]{Haskell}{F:/git/FuncProg/Assignment1/Assign1.hs}
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{result.png}
+\caption{Программа выполнена на консоле}
+\end{figure}
+
+Отображение кривых на \textbf{Python} с библиотекой \textbf{matplotlib}
+\begin{figure}[H]
+\begin{subfigure}[1]{0.4\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert4.png}
+\end{subfigure} 
+\hfill
+\begin{subfigure}[1]{0.6\textwidth}
+\centering \includegraphics[width = \textwidth]{hilbert6.png}
+\end{subfigure}
+\caption{Кривые Гилберта с 4 и 6 интераций}
+\end{figure}
+
+\section*{Вывод}
+\addcontentsline{toc}{section}{Вывод}
 
 
 \end{document}

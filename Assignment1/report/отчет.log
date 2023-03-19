@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=latex 2023.3.8)  8 MAR 2023 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.8)  11 MAR 2023 20:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**./Assignment1/отчет.tex
-(Assignment1/отчет.tex
+**./отчет.tex
+(отчет.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -334,10 +334,10 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(C:\Program Files\MiKTeX\tex/latex/graphics-def\dvips.def
-File: dvips.def 2022/09/22 v3.1e Graphics/color driver for dvips
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen150
 \Gin@req@width=\dimen151
@@ -439,7 +439,7 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 )
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
@@ -679,15 +679,10 @@ Package biblatex Info: Document encoding is UTF8 ....
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2023-02-07 L3 programming layer (loader) 
 
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-dvips.def
-File: l3backend-dvips.def 2023-01-16 L3 backend support: dvips
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count403
 \l__pdf_internal_box=\box53
-\g__pdf_backend_object_int=\count403
-\l__pdf_backend_content_box=\box54
-\l__pdf_backend_model_box=\box55
-\g__pdf_backend_annotation_int=\count404
-\g__pdf_backend_link_int=\count405
-\g__pdf_backend_link_sf_int=\count406
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2023-02-07 L3 programming layer (loader) 
@@ -728,11 +723,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count407
+\c@section@level=\count404
 )
 \@linkdim=\dimen161
-\Hy@linkcounter=\count408
-\Hy@pagecounter=\count409
+\Hy@linkcounter=\count405
+\Hy@pagecounter=\count406
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
@@ -746,7 +741,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Program Files\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count410
+\Hy@SavedSpaceFactor=\count407
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -762,7 +757,7 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count411
+\c@Hy@tempcnt=\count408
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen162
 
@@ -773,7 +768,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count412
+\Fld@menulength=\count409
 \Field@Width=\dimen163
 \Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -788,33 +783,26 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count413
-\c@Item=\count414
-\c@Hfootnote=\count415
+\Hy@abspage=\count410
+\c@Item=\count411
+\c@Hfootnote=\count412
 )
-Package hyperref Info: Driver (default): hdvips.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Program Files\MiKTeX\tex/latex/hyperref\hdvips.def
-File: hdvips.def 2023-02-07 v7.00v Hyperref driver for dvips
-
-(C:\Program Files\MiKTeX\tex/latex/hyperref\pdfmark.def
-File: pdfmark.def 2023-02-07 v7.00v Hyperref definitions for pdfmark specials
-\pdf@docset=\toks25
-\pdf@box=\box56
-\pdf@toks=\toks26
-\pdf@defaulttoks=\toks27
-\HyField@AnnotCount=\count416
-\Fld@listcount=\count417
-\c@bookmark@seq@number=\count418
-
-(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
 
 (C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
+\Fld@listcount=\count413
+\c@bookmark@seq@number=\count414
+
+(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
 (C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
@@ -822,7 +810,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip84
-))
+)
 Package hyperref Info: Option `colorlinks' set `true' on input line 37.
 
 (C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
@@ -836,11 +824,11 @@ Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
 
 (C:\Program Files\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
-\FV@CodeLineNo=\count419
+\FV@CodeLineNo=\count415
 \FV@InFile=\read4
-\FV@TabBox=\box57
-\c@FancyVerbLine=\count420
-\FV@StepNumber=\count421
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count416
+\FV@StepNumber=\count417
 \FV@OutFile=\write4
 )
 (C:\Program Files\MiKTeX\tex/latex/upquote\upquote.sty
@@ -852,58 +840,58 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
 (C:\Program Files\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2023/01/19 line numbers on paragraphs v5.1
-\linenopenalty=\count422
-\output=\toks28
-\linenoprevgraf=\count423
+\linenopenalty=\count418
+\output=\toks25
+\linenoprevgraf=\count419
 \linenumbersep=\dimen165
 \linenumberwidth=\dimen166
-\c@linenumber=\count424
-\c@pagewiselinenumber=\count425
-\c@LN@truepage=\count426
-\c@internallinenumber=\count427
-\c@internallinenumbers=\count428
+\c@linenumber=\count420
+\c@pagewiselinenumber=\count421
+\c@LN@truepage=\count422
+\c@internallinenumber=\count423
+\c@internallinenumbers=\count424
 \quotelinenumbersep=\dimen167
 \bframerule=\dimen168
 \bframesep=\dimen169
-\bframebox=\box58
-\linenoamsmath@ams@eqpen=\count429
+\bframebox=\box55
+\linenoamsmath@ams@eqpen=\count425
 LaTeX Info: Redefining \\ on input line 3131.
 )
-\c@FV@TrueTabGroupLevel=\count430
-\c@FV@TrueTabCounter=\count431
-\FV@TabBox@Group=\box59
+\c@FV@TrueTabGroupLevel=\count426
+\c@FV@TrueTabCounter=\count427
+\FV@TabBox@Group=\box56
 \FV@TmpLength=\skip85
-\c@FV@HighlightLinesStart=\count432
-\c@FV@HighlightLinesStop=\count433
-\FV@LoopCount=\count434
-\FV@NCharsBox=\box60
+\c@FV@HighlightLinesStart=\count428
+\c@FV@HighlightLinesStop=\count429
+\FV@LoopCount=\count430
+\FV@NCharsBox=\box57
 \FV@BreakIndent=\dimen170
-\FV@BreakIndentNChars=\count435
+\FV@BreakIndentNChars=\count431
 \FV@BreakSymbolSepLeft=\dimen171
-\FV@BreakSymbolSepLeftNChars=\count436
+\FV@BreakSymbolSepLeftNChars=\count432
 \FV@BreakSymbolSepRight=\dimen172
-\FV@BreakSymbolSepRightNChars=\count437
+\FV@BreakSymbolSepRightNChars=\count433
 \FV@BreakSymbolIndentLeft=\dimen173
-\FV@BreakSymbolIndentLeftNChars=\count438
+\FV@BreakSymbolIndentLeftNChars=\count434
 \FV@BreakSymbolIndentRight=\dimen174
-\FV@BreakSymbolIndentRightNChars=\count439
-\c@FancyVerbLineBreakLast=\count440
-\FV@LineBox=\box61
-\FV@LineIndentBox=\box62
-\c@FV@BreakBufferDepth=\count441
+\FV@BreakSymbolIndentRightNChars=\count435
+\c@FancyVerbLineBreakLast=\count436
+\FV@LineBox=\box58
+\FV@LineIndentBox=\box59
+\c@FV@BreakBufferDepth=\count437
 \FV@LineWidth=\dimen175
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count442
-\calc@Bcount=\count443
+\calc@Acount=\count438
+\calc@Bcount=\count439
 \calc@Adimen=\dimen176
 \calc@Bdimen=\dimen177
 \calc@Askip=\skip86
 \calc@Bskip=\skip87
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count444
+\calc@Ccount=\count440
 \calc@Cskip=\skip88
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\shellesc.sty
@@ -921,8 +909,8 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))
 (C:\Program Files\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Program Files\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count445
-\decimalpart=\count446
+\integerpart=\count441
+\decimalpart=\count442
 )
 Package: xstring 2023/01/14 v1.85 String manipulations (CT)
 )
@@ -936,77 +924,48 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 (C:\Program Files\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count447
-\float@exts=\toks29
-\float@box=\box63
-\@float@everytoks=\toks30
-\@floatcapt=\box64
+\c@float@type=\count443
+\float@exts=\toks26
+\float@box=\box60
+\@float@everytoks=\toks27
+\@floatcapt=\box61
 )
 \minted@appexistsfile=\read5
-\minted@bgbox=\box65
+\minted@bgbox=\box62
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count448
-\c@minted@pygmentizecounter=\count449
-\@float@every@listing=\toks31
-\c@listing=\count450
+\c@minted@FancyVerbLineTemp=\count444
+\c@minted@pygmentizecounter=\count445
+\@float@every@listing=\toks28
+\c@listing=\count446
 )
 runsystem(if not exist _minted-отчет mkdir _minted-отчет)...executed.
 
 
-(C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count451
-\lst@gtempboxa=\box66
-\lst@token=\toks32
-\lst@length=\count452
-\lst@currlwidth=\dimen182
-\lst@column=\count453
-\lst@pos=\count454
-\lst@lostspace=\dimen183
-\lst@width=\dimen184
-\lst@newlines=\count455
-\lst@lineno=\count456
-\lst@maxwidth=\dimen185
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
-(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count457
-\lst@skipnumbers=\count458
-\lst@framebox=\box67
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen182
+\captionmargin=\dimen183
+\caption@leftmargin=\dimen184
+\caption@rightmargin=\dimen185
+\caption@width=\dimen186
+\caption@indent=\dimen187
+\caption@parindent=\dimen188
+\caption@hangindent=\dimen189
+Package caption Info: Standard document class detected.
 )
-(C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
-))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
+\c@caption@flags=\count447
+\c@continuedfloat=\count448
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 )
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
+(C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count449
+\c@subtable=\count450
 )
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-! Package Listings Error: Couldn't load requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 }
-      
-? 
-
-! Package Listings Error: language haskellbreaklines undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 }
-      
-? 
 (C:\Program Files\MiKTeX\tex/latex/tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
@@ -1065,129 +1024,118 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 	\begin{center}
+l.55 	\begin{center}
                     
 ? 
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 8
-4.
+0.
 (C:\Program Files\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `OML/cmr/m/up' undefined
-(Font)              using `OML/cmr/m/it' instead on input line 84.
+(Font)              using `OML/cmr/m/it' instead on input line 80.
 
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 84.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 84.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 84.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 80.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
-4.
+0.
 (C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `OMS/cmr/m/up' undefined
-(Font)              using `OMS/cmr/m/n' instead on input line 84.
+(Font)              using `OMS/cmr/m/n' instead on input line 80.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for PD1+cmr on input line 8
-4.
-LaTeX Font Info:    No file PD1cmr.fd. on input line 84.
+0.
+LaTeX Font Info:    No file PD1cmr.fd. on input line 80.
 
 
 LaTeX Font Warning: Font shape `PD1/cmr/m/up' undefined
-(Font)              using `PD1/pdf/m/n' instead on input line 84.
+(Font)              using `PD1/pdf/m/n' instead on input line 80.
 
-LaTeX Font Info:    Trying to load font information for PU+cmr on input line 84
+LaTeX Font Info:    Trying to load font information for PU+cmr on input line 80
 .
-LaTeX Font Info:    No file PUcmr.fd. on input line 84.
+LaTeX Font Info:    No file PUcmr.fd. on input line 80.
 
 LaTeX Font Warning: Font shape `PU/cmr/m/up' undefined
-(Font)              using `PU/pdf/m/n' instead on input line 84.
+(Font)              using `PU/pdf/m/n' instead on input line 80.
 
 
-Overfull \hbox (1.99701pt too wide) in paragraph at lines 84--93
+Overfull \hbox (1.99701pt too wide) in paragraph at lines 80--89
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
  []
 
-\HyPL@Entry{0<</S/D>>}
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.95 \end{titlepage}
-                    
-? 
-! Undefined control sequence.
-\pdfmark@ ...type \space pdfmark}\Hy@endcolorlink 
-                                                  \fi \fi \fi 
-l.95 \end{titlepage}
-                    
-? 
 [1
 
-] (C:\Program Files\MiKTeX\tex/latex/tools\indentfirst.sty
+{C:/Users/HH/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(C:\Program Files\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count459
-\@quotereset=\count460
+\@quotelevel=\count451
+\@quotereset=\count452
 (C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
 (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 227.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
 Package xcolor Info: Model `RGB' extended on input line 1369.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
@@ -1201,39 +1149,35 @@ runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > о
 
 runsystem(del отчет.aex)...executed.
 
-
-No file отчет.aux.
+ (отчет.aux)
 \openout1 = `отчет.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Info: Redefining \th on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Info: Redefining \th on input line 93.
+
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
-
-LaTeX Warning: First page is already shipped out, ignoring
-               \AtBeginDvi on input line 97.
-
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1264,12 +1208,30 @@ LaTeX Warning: First page is already shipped out, ignoring
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count453
+\scratchdimen=\dimen190
+\scratchbox=\box63
+\nofMPsegments=\count454
+\nofMParguments=\count455
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count456
+\MPscratchDim=\dimen191
+\MPnumerator=\count457
+\makeMPintoPDFobject=\count458
+\everyMPtoPDFconversion=\toks30
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
-LaTeX Warning: First page is already shipped out, ignoring
-               \AtBeginDvi on input line 97.
-
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 Package biblatex Info: Trying to load language 'russian'...
 Package biblatex Info: ... file 'russian.lbx' found.
+
 (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\russian.lbx
 File: russian.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 )
@@ -1282,36 +1244,16 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'отчет.bbl' not found.
 
 No file отчет.bbl.
-Package biblatex Info: Reference section=0 on input line 97.
-Package biblatex Info: Reference segment=0 on input line 97.
-Package hyperref Info: Link coloring ON on input line 97.
+Package biblatex Info: Reference section=0 on input line 93.
+Package biblatex Info: Reference segment=0 on input line 93.
+Package hyperref Info: Link coloring ON on input line 93.
+(отчет.out) (отчет.out)
 \@outlinefile=\write6
 \openout6 = `отчет.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-\c@lstlisting=\count461
-
-! LaTeX Error: Command \l@subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \begin{document}
-                     
-? 
-
-! LaTeX Error: Command \l@subtable undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \begin{document}
-                     
-? 
 
 ! LaTeX Error: File `titlepage.tex' not found.
 
@@ -1319,306 +1261,106 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-(C:\Program Files\MiKTeX\tex/latex/tools\.tex File ignored)
-No file отчет.toc.
+(C:\Program Files\MiKTeX\tex/latex/tools\.tex File ignored) (отчет.toc
+LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+)
 \tf@toc=\write7
 \openout7 = `отчет.toc'.
 
-[1]
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 109.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 117.
- (F:/git/FuncProg/Assignment1/Assign1.hs
-consecutive:
-[2])
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-отч�
-�т\default.pygstyle)...executed.
 
- (_minted-отчет/default.pygstyle)
-runsystem(pygmentize -l "[" -f latex -P commandprefix=PYG -F tokenmerge -P stri
-pnl="False" -o _minted-отчет/6AD0863FE1D453975DA0966D024351112E697FCB20D51
-E7B67842D508BF38946.pygtex H)...executed.
-
-
-
-! Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.118 ...utminted[firstnumber= 8, lastline = 22][H
-                                                  askell]{F:/git/FuncProg/As...
-
-? 
-(F:/git/FuncProg/Assignment1/Assign1.hs
-consecutive:
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.99 \newpage
+              [1] (_minted-отчет/default.pygstyle)
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+1.
+ (C:\Program Files\MiKTeX\tex/latex/cyrillic\t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-Overfull \hbox (17.88904pt too wide) in paragraph at lines 133--134
+LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 9.
+ [2])
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex)
+Overfull \hbox (17.88904pt too wide) in paragraph at lines 129--130
 \T2A/cmr/bx/it/12 [hjusg], [mbbyhwbopvupl], [ofii], [wfexresmhtnic]] \T2A/cmr/m
 /it/12 ([[1], [2], [3], [4]] -> [1,2,3,4])
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-(F:/git/FuncProg/Assignment1/Assign1.hs
-consecutive:
-) [3]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.148 
-      
-? 
-! Extra \endcsname.
-\minted@configlang ...lang\minted@lang \endcsname 
-                                                  \else \expandafter \gdef \...
-l.148 
-      
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.148 
-      
-? 
-! Extra \endcsname.
-\minted@configlang ...ng\minted@lang @i\endcsname 
-                                                  \else \expandafter \gdef \...
-l.148 
-      
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.148 
-      
-? 
-! Extra \endcsname.
-\minted@configlang ...lang\minted@lang \endcsname 
-                                                  \else \expandafter \gdef \...
-l.148 
-      
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.148 
-      
-? 
-! Extra \endcsname.
-\minted@configlang ...ng\minted@lang @i\endcsname 
-                                                  \else \expandafter \gdef \...
-l.148 
-      
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.148 
-      
-? 
-! Extra \endcsname.
-\minted@fvset ...stfv@lang\minted@lang \endcsname 
-                                                  \expandafter \fvset \expan...
-l.148 
-      
-? 
-\openout4 = `отчет.pyg'.
 
-)
-Runaway argument?
-! File ended while scanning use of \FancyVerbGetLine.
-<inserted text> 
-                \par 
-<*> ./Assignment1/отчет.tex
-                                
-? 
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex) [3]
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex) [4]
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex)
+<hilbert4step1.png, id=91, 481.8pt x 361.35pt>
+File: hilbert4step1.png Graphic file (type png)
+<use hilbert4step1.png>
+Package pdftex.def Info: hilbert4step1.png  used on input line 186.
+(pdftex.def)             Requested size: 188.21288pt x 141.1575pt.
+<hilbert4step2.png, id=93, 481.8pt x 361.35pt>
+File: hilbert4step2.png Graphic file (type png)
+<use hilbert4step2.png>
+Package pdftex.def Info: hilbert4step2.png  used on input line 191.
+(pdftex.def)             Requested size: 188.21288pt x 141.1575pt.
+<hilbert4step3.png, id=94, 462.528pt x 346.896pt>
+File: hilbert4step3.png Graphic file (type png)
+<use hilbert4step3.png>
+Package pdftex.def Info: hilbert4step3.png  used on input line 196.
+(pdftex.def)             Requested size: 188.21288pt x 141.15904pt.
+<hilbert4step4.png, id=95, 462.528pt x 346.896pt>
+File: hilbert4step4.png Graphic file (type png)
+<use hilbert4step4.png>
+Package pdftex.def Info: hilbert4step4.png  used on input line 201.
+(pdftex.def)             Requested size: 188.21288pt x 141.15904pt.
+ [5] [6 <./hilbert4step1.png> <./hilbert4step2.png> <./hilbert4step3.png> <./hi
+lbert4step4.png>]
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex
+LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <5> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 73.
+LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+ [7]) [8]
+(_minted-отчет/42A836E12A1F4BC6DED29E1C30E29C00F39CF739B35121D020A87194ADA
+3BB5F.pygtex)
+<result.png, id=123, 688.07062pt x 423.08063pt>
+File: result.png Graphic file (type png)
+<use result.png>
+Package pdftex.def Info: result.png  used on input line 216.
+(pdftex.def)             Requested size: 418.25368pt x 257.175pt.
+ [9]
+<hilbert4.png, id=128, 462.528pt x 346.896pt>
+File: hilbert4.png Graphic file (type png)
+<use hilbert4.png>
+Package pdftex.def Info: hilbert4.png  used on input line 223.
+(pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
+<hilbert6.png, id=129, 693.792pt x 704.6325pt>
+File: hilbert6.png Graphic file (type png)
+<use hilbert6.png>
+Package pdftex.def Info: hilbert6.png  used on input line 227.
+(pdftex.def)             Requested size: 250.95476pt x 254.87172pt.
 
-*
-! FancyVerb Error:
-  Couldn't find `\end{minted}' to end a verbatim environment on input line 148.
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 222--229
+[]$[]$  $[]$ 
+ []
 
-.
-\FV@Error ... {FancyVerb Error:
-\space \space #1
-}
-                                                  
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-Runaway argument?
-{
-! Paragraph ended before \minted@opt@quote was complete.
-<to be read again> 
-                   \par 
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-! Extra }, or forgotten \endgroup.
-<argument> ... .pyg}\pdf@mdfivesum {\minted@cmd }}
-                                                  
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-Runaway argument?
-{
-! Paragraph ended before \minted@opt@quote was complete.
-<to be read again> 
-                   \par 
-<*> 
-    
-? 
-! Unbalanced write command.
-\minted@cmd ...space -l \minted@opt@quote {\par } 
-                                                  -f latex -P commandprefix=...
-<*> 
-    
-? 
-runsystem(pygmentize -l \par )...executed.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-! Missing endcsname inserted.
-<to be read again> 
-                   scan_stop: 
-<*> 
-    
-? 
-! Use of ??? doesn't match its definition.
-<argument> ???  
-                ! LaTeX Error: scan_stop: invalid in file name. Lost: tex_pa...
-<*> 
-    
-? 
-
-! Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-<*> 
-    
-? 
-[4] (отчет.aux)
+[10 <./result.png>] [11 <./hilbert4.png> <./hilbert6.png>] (отчет.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 Package rerunfilecheck Warning: File `отчет.out' has changed.
@@ -1626,25 +1368,42 @@ Package rerunfilecheck Warning: File `отчет.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `отчет.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  6FB4D01CFB1343D8C3F6A0631C16FA0F;627.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                отчет
-(biblatex)                and rerun LaTeX afterwards.
-
-runsystem(del отчет.pyg)...executed.
-
+(rerunfilecheck)             Before: 831C2BFA99440F5BE5A6D87AD1A05F2E;1441
+(rerunfilecheck)             After:  4296B4A28EB993177E1F461B6459390A;1526.
 Package logreq Info: Writing requests to 'отчет.run.xml'.
 \openout1 = `отчет.run.xml'.
 
- 
+ ) 
 Here is how much of TeX's memory you used:
- 25095 strings out of 476340
- 435385 string characters out of 5797970
- 1870337 words of memory out of 5000000
- 45169 multiletter control sequences out of 15000+600000
- 527230 words of font info for 65 fonts, out of 8000000 for 9000
+ 25367 strings out of 476339
+ 449024 string characters out of 5797944
+ 1860340 words of memory out of 5000000
+ 45389 multiletter control sequences out of 15000+600000
+ 529572 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,81p,697b,1946s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on отчет.dvi (5 pages, 16656 bytes).
+ 75i,9n,81p,1487b,1814s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lait1200.
+pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1095
+.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labi120
+0.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt12
+00.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1
+200.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx
+1440.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lab
+x1200.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
+bx1728.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
+arm1200.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\
+labx1095.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600
+\larm1000.pk> <C:\Users\HH\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
+0\larm1440.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on отчет.pdf (12 pages, 380863 bytes).
+PDF statistics:
+ 650 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+

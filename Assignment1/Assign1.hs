@@ -1,6 +1,7 @@
 
 module Main where
 import Language.Haskell.TH.PprLib (sep)
+import Data.Char (intToDigit)
 -- Exercise 1
 -- n l k p = 3 4 9 6
 -- If n is fixed, l k p have no meaning ??
@@ -56,31 +57,53 @@ pascal i j =
 -- Hilbert
 -- Hilbert curve used to sharpen image
 -- Hilbert function continuous at every point
+-- rotate right
 rotr:: Int -> [[Int]]->[[Int]]
 rotr n [] = []
 rotr n a  = [last (head a), n - 1 - head(head a)]:rotr n (tail a)
 
+-- 2^n
 power2:: Int -> Int
 power2 0 = 1
 power2 n = 2 * power2 (n-1)
 
-reflexx::Int -> [[Int]] -> [[Int]]
-reflexx n [] = []
-reflexx n a = [n - 1 - head (last a), last (last a)]: reflexx n (init a)
+--reflex horizontal
+reflexy::Int -> [[Int]] -> [[Int]]
+reflexy n [] = []
+reflexy n a = [n - 1 - head (last a), last (last a)]: reflexy n (init a)
 
+--reverse sequence of coordinates (for easier visualization)
 rev:: [[Int]] -> [[Int]]
 rev [a] = [a]
 rev a = (last a): rev (init a)
 
+--shift by vertical axis
 shiftup:: Int -> [[Int]]->[[Int]]
 shiftup a [] = []
 shiftup a b = [head (head b), a+ last(head b)]: shiftup a (tail b)
 
-hilbert:: Int -> [Int] -> [[Int]]
-hilbert 0 [a,b] = [[a,b]]
-hilbert 1 [a,b] = [[a,b],[a,b+1],[a+1,b+1],[a+1,b]]
-hilbert n [a,b] = rev (rotr (power2(n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]) ++ reflexx (power2 n) (rev (rotr (power2 (n-1)) (hilbert (n-1) [a,b])) ++ shiftup (power2 (n-1)) (hilbert (n-1)  [a , b]))
+--display curve by sequence of coordinates 
+hilbert:: Int -> [[Int]]
+hilbert 0  = []
+hilbert 1  = [[0,0],[0,1],[1,1],[1,0]]
+hilbert n  = rev (rotr (power2(n-1)) (hilbert (n-1) )) ++ shiftup (power2 (n-1)) (hilbert (n-1) ) ++ reflexy (power2 n) (rev (rotr (power2 (n-1)) (hilbert (n-1) )) ++ shiftup (power2 (n-1)) (hilbert (n-1)))
 
+--
+--print 
+inttoString:: Int -> String
+inttoString 0 = "0"
+inttoString a = if a < 10 then [intToDigit a]  else (inttoString (div a 10)) ++ [intToDigit (mod a 10)]
+
+toStringCustom::[Int] -> String
+toStringCustom [] = []
+toStringCustom [a] = inttoString a
+toStringCustom a = inttoString (head a) ++","++toStringCustom (tail a) 
+
+toStringCustom2:: [[Int]] ->String
+toStringCustom2 [] = []
+toStringCustom2 [[]] = []
+toStringCustom2 [a] = "[" ++ toStringCustom a ++"]"
+toStringCustom2 a = "["++(toStringCustom (head a) )++"],"++ (toStringCustom2 (tail a))
 main :: IO ()
 main = do
     print "Exercise 1: Result is"
@@ -93,5 +116,5 @@ main = do
     print (separate ["kiv", "eydew", "hjusg", "mbbyhwbopvupl", "ofii", "wfexresmhtnic"])
     print "Exercise 5: Pascal number "
     print (pascal 3 4)
-    print "Exercise 6: Pascal number "
-    print (hilbert 6 [0,0])
+    print "Exercise 6: Hilbert curve 7 iterations:"
+    writeFile "hilbert.txt" (toStringCustom2 (hilbert 4))

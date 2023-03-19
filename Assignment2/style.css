@@ -38,7 +38,8 @@ body{
 }
 .rook{
     background-image: url("rook.png");
-    background-size: contain;
+    background-color: green;
+    background-size:cover;
     border: 1px solid gray;
 }
 
