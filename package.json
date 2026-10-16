@@ -1,0 +1,14 @@
+{
+  "name": "funcprog-lab",
+  "private": true,
+  "description": "Web demos of the FuncProg Haskell assignments",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "node scripts/parity.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

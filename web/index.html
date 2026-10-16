@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FuncProg Lab</title>
+  <meta name="description" content="Three Haskell assignments you can play with in the browser: a Hilbert curve, every non-attacking rook placement, and an iterated trust game. Each one comes with a step-by-step explanation of how the Haskell works.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235E5086'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='sans-serif'%3E%CE%BB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar chrome">
+    <a class="brand" href="./"><span class="mark">λ</span>FuncProg Lab</a>
+    <nav>
+      <a href="#demos">Demos</a>
+      <a href="#embed">Embed</a>
+      <a class="btn secondary" href="https://github.com/dat-2k2/FuncProg" target="_blank" rel="noopener">Source on GitHub ↗</a>
+    </nav>
+  </header>
+
+  <section class="hero chrome">
+    <p class="eyebrow">Functional programming · Spring 2023</p>
+    <h1>Three Haskell assignments, playable in the browser.</h1>
+    <p class="lede">A recursive space-filling curve, every way to place <i>n</i> rooks that can't attack each other, and a repeated
+      trust game between simple strategies. Use <b>Play</b> to try each one. <b>How it works</b> walks through the Haskell
+      one step at a time, with the matching code highlighted.</p>
+  </section>
+
+  <div class="tabs chrome" role="tablist" id="demos" aria-label="Demos">
+    <button role="tab" data-demo="hilbert" aria-selected="true"><span>01</span>Hilbert curve</button>
+    <button role="tab" data-demo="rooks" aria-selected="false"><span>02</span>Rook placements</button>
+    <button role="tab" data-demo="trust" aria-selected="false"><span>03</span>Trust game</button>
+  </div>
+
+  <main>
+    <section class="card" role="tabpanel" data-demo="hilbert" data-file="Assignment1/Assign1.hs">
+      <div class="source"></div>
+      <div class="live">
+        <div class="pane-head">
+          <div>
+            <h2>Hilbert curve</h2>
+            <p>One line that visits every cell of a grid. Each order is built from four turned or mirrored copies of the order before it.</p>
+          </div>
+          <div class="mode" role="group" aria-label="Mode">
+            <button data-mode="play" aria-pressed="true">Play</button>
+            <button data-mode="explain" aria-pressed="false">How it works</button>
+          </div>
+        </div>
+        <div class="play"></div>
+        <div class="explain" hidden tabindex="-1"></div>
+      </div>
+    </section>
+
+    <section class="card" role="tabpanel" data-demo="rooks" data-file="Assignment2/Assign2.hs" hidden>
+      <div class="source"></div>
+      <div class="live">
+        <div class="pane-head">
+          <div>
+            <h2>Rook placements</h2>
+            <p>Every way to put <i>n</i> rooks on an <i>n×n</i> board so that no two share a row or column. The Haskell builds a tree of choices and reads off its paths.</p>
+          </div>
+          <div class="mode" role="group" aria-label="Mode">
+            <button data-mode="play" aria-pressed="true">Play</button>
+            <button data-mode="explain" aria-pressed="false">How it works</button>
+          </div>
+        </div>
+        <div class="play"></div>
+        <div class="explain" hidden tabindex="-1"></div>
+      </div>
+    </section>
+
+    <section class="card" role="tabpanel" data-demo="trust" data-file="Assignment3/assignment3.hs" hidden>
+      <div class="source"></div>
+      <div class="live">
+        <div class="pane-head">
+          <div>
+            <h2>Trust game</h2>
+            <p>Each round, both players either cooperate (pay 1 coin so the other gets 3) or cheat. Inspired by <a href="https://ncase.me/trust/" target="_blank" rel="noopener">The Evolution of Trust</a>.</p>
+          </div>
+          <div class="mode" role="group" aria-label="Mode">
+            <button data-mode="play" aria-pressed="true">Play</button>
+            <button data-mode="explain" aria-pressed="false">How it works</button>
+          </div>
+        </div>
+        <div class="play"></div>
+        <div class="explain" hidden tabindex="-1"></div>
+      </div>
+    </section>
+
+    <p class="credit embed-only"><a href="./" target="_blank" rel="noopener">FuncProg Lab ↗</a> · the Haskell source next to a JavaScript port of the same functions</p>
+  </main>
+
+  <section class="embed-box chrome" id="embed">
+    <div>
+      <h2>Put a demo on your own site</h2>
+      <p>Each demo has an embed mode without the page around it. Paste the snippet into any HTML page. The small script resizes the frame to fit.</p>
+      <div class="embed-opts">
+        <label class="label">Demo
+          <select data-act="embed-demo">
+            <option value="hilbert">Hilbert curve</option>
+            <option value="rooks">Rook placements</option>
+            <option value="trust">Trust game</option>
+          </select>
+        </label>
+        <label class="switch"><input type="checkbox" data-act="embed-explain"><span></span>Open in "How it works"</label>
+      </div>
+    </div>
+    <div class="snippet">
+      <pre><code data-s="snippet"></code></pre>
+      <button class="btn primary" data-act="copy">Copy</button>
+    </div>
+  </section>
+
+  <footer class="chrome">
+    <p>Each demo runs a JavaScript port of the Haskell functions. A test runs the real Haskell with GHC and checks the ports give the same output.</p>
+  </footer>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
