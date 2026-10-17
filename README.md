@@ -7,6 +7,8 @@ In Assignment 2, recommend to try assertion to break the recursion instead of fi
 
 ## Web demo
 
+The page is styled with the shared UI kit from the portfolio (`https://dat-2k2.github.io/kit/kit.css` and `kit.js`, light/dark, Geist); only the layout lives in this repo.
+
 `web/` is a static site that runs all three assignments in the browser. Each demo has two modes:
 
 - **Play**: change the inputs and watch the result (curve order, board size, strategies, or play the trust game yourself).
