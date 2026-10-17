@@ -78,8 +78,8 @@ const buildSnippet = () => {
   const src = `${base}?demo=${demo}&embed=1${explain ? '&mode=explain' : ''}`;
   snippetEl.textContent =
 `<iframe src="${src}"
-        title="${title} demo" loading="lazy"
-        style="width:100%;height:680px;border:0"></iframe>
+  title="${title} demo" loading="lazy"
+  style="width:100%;height:680px;border:0"></iframe>
 <script src="${base}embed.js" async></script>`;
 };
 document.querySelector('[data-act=embed-demo]').addEventListener('change', buildSnippet);

@@ -37,7 +37,7 @@ function draw(canvas, size, layers, { grid = size <= 32, joins = [] } = {}) {
       const step = Math.max(1, Math.floor(pts.length / 96));
       for (let i = 1; i < upto; i += step) {
         const j = Math.min(i + step, upto);
-        ctx.strokeStyle = `hsl(${258 - (150 * i) / pts.length} 38% 44%)`;
+        ctx.strokeStyle = `hsl(${32 - (47 * i) / pts.length} 78% 46%)`;
         ctx.beginPath(); ctx.moveTo(X(pts[i - 1][0]), Y(pts[i - 1][1]));
         for (let k = i; k < j; k++) ctx.lineTo(X(pts[k][0]), Y(pts[k][1]));
         ctx.stroke();

@@ -8,7 +8,7 @@ export class Stepper {
     this.steps = [];
     this.i = 0;
     root.innerHTML = `
-      <div class="progress" aria-hidden="true"></div>
+      <div class="progress" role="group" aria-label="Steps"></div>
       <div class="explain-figure"></div>
       <div class="step-text" aria-live="polite">
         <h3></h3>
